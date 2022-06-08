@@ -120,11 +120,42 @@ header nav ul a:hover {
   color: #258530;
 }
 
+header .number {
+  margin-right: 1em;
+  font-family: "Nunito", sans-serif;
+}
+
+header .number span .fa-phone {
+  margin-right: 1em;
+}
+
 .home {
   background-image: url(../img/background_home.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   height: 100vh;
+}
+
+.home .share {
+  z-index: 2;
+  position: fixed;
+  right: 30px;
+  bottom: 50%;
+}
+
+.home .share span {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
+  display: block;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.home .share .fa-brands {
+  color: #A90000;
+  font-size: 1.2em;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,73 +1,74 @@
-header{
-    width: 100%;
-    position: absolute;
-    display: flex;
-align-items: center;
-justify-content: space-between;
-margin-top: 0.5em;
+header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5em;
 
-    nav{
-       ul{
-           display: flex;
-           justify-content: space-around;
-           li {
-            position: relative;
-               display: flex;
-               align-items: center;
-               text-transform: uppercase;
-               color: $white;
-               font-family: $font1;
-               margin-right: 2em;
-               img{
-                width: 16px;
-                height: 16px;
-                margin-right: 1em;
-               }
-             
-               }
-               .pistolet{
-                display: none;
-               
-            }
-               li:hover > .pistolet{
-               
-                display: block;
-                width: 18px;
-                background-image: url(../img/pistolet.png);
-                background-repeat: no-repeat;
-                position: absolute;
-                right: -21px;
-                height: 18px;
-                bottom: -19px;
-                transition: ease 1s;
- 
-            }
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $font1;
+        margin-right: 2em;
+        img {
+          width: 16px;
+          height: 16px;
+          margin-right: 1em;
+        }
+      }
+      .pistolet {
+        display: none;
+      }
+      li:hover > .pistolet {
+        display: block;
+        width: 18px;
+        background-image: url(../img/pistolet.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -21px;
+        height: 18px;
+        bottom: -19px;
+        transition: ease 1s;
+      }
 
-            a{
-                position: relative;
-                &:after{
-                    content: "";
-                    position: absolute;
-                    background-color: $red;
-                    height: 2px;
-                    width: 0;
-                    right: 0;
-                    bottom: -10px;
-                    transition: 0.3s;
-                }
-                &:hover:after{
-                    width: 100%;
-                }
-                &:hover{
-                    transition: 0.3s;
-                    color: rgb(37, 133, 48);
-                }
-            }
-         
-           }
-           
-       }
-
-
+      a {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $red;
+          height: 2px;
+          width: 0;
+          right: 0;
+          bottom: -10px;
+          transition: 0.3s;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+        &:hover {
+          transition: 0.3s;
+          color: rgb(37, 133, 48);
+        }
+      }
     }
+  }
 
+  .number{
+      margin-right: 1em;
+      font-family: $font1;
+      span{
+        .fa-phone{
+            margin-right: 1em;
+        }
+      }
+  }
+}
