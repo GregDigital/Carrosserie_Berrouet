@@ -46,6 +46,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 0.5em;
 }
 
 header nav ul {
@@ -114,6 +115,8 @@ header nav ul a:hover:after {
 }
 
 header nav ul a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #258530;
 }
 

@@ -4,6 +4,7 @@ header{
     display: flex;
 align-items: center;
 justify-content: space-between;
+margin-top: 0.5em;
 
     nav{
        ul{
@@ -58,6 +59,7 @@ justify-content: space-between;
                     width: 100%;
                 }
                 &:hover{
+                    transition: 0.3s;
                     color: rgb(37, 133, 48);
                 }
             }
