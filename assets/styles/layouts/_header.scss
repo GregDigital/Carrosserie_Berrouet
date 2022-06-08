@@ -1,0 +1,71 @@
+header{
+    width: 100%;
+    position: absolute;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+
+    nav{
+       ul{
+           display: flex;
+           justify-content: space-around;
+           li {
+            position: relative;
+               display: flex;
+               align-items: center;
+               text-transform: uppercase;
+               color: $white;
+               font-family: $font1;
+               margin-right: 2em;
+               img{
+                width: 16px;
+                height: 16px;
+                margin-right: 1em;
+               }
+             
+               }
+               .pistolet{
+                display: none;
+               
+            }
+               li:hover > .pistolet{
+               
+                display: block;
+                width: 18px;
+                background-image: url(../img/pistolet.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                right: -21px;
+                height: 18px;
+                bottom: -19px;
+                transition: ease 1s;
+ 
+            }
+
+            a{
+                position: relative;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    background-color: $red;
+                    height: 2px;
+                    width: 0;
+                    right: 0;
+                    bottom: -10px;
+                    transition: 0.3s;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+                &:hover{
+                    color: rgb(37, 133, 48);
+                }
+            }
+         
+           }
+           
+       }
+
+
+    }
+
