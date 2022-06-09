@@ -1,0 +1,51 @@
+.service {
+  position: relative;
+
+  h1 {
+    font-size: 1.2em;
+    font-family: $font1;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+    img:first-child {
+      margin-right: 0.5em;
+    }
+    img:last-child {
+      margin-left: 0.5em;
+    }
+  }
+
+  p {
+    width: 70%;
+    font-size: 0.9em;
+    margin: 4em auto 0 auto;
+    text-align: justify;
+  }
+
+  .container {
+    margin: 6em auto 6em auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    .container__infos {
+      border: solid 2px $red;
+      width: 180px;
+      height: 250px;
+    }
+  }
+
+  #img_peinture {
+    display: block;
+    margin-top: 4em;
+    background-attachment: fixed;
+    background-image: url(../img/img_peinture.png);
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.7;
+  }
+}

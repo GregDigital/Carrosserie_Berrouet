@@ -1,25 +1,86 @@
-.home{
-    background-image: url(../img/background_home.png);
-    background-repeat: no-repeat;
-   background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    .share {
-        z-index: 2;
-        position: fixed;
-        right: 30px;
-        bottom: 50%;
-        span {
-          writing-mode: vertical-rl;
-          text-orientation: upright;
-          display: block;
-          margin-bottom: 1em;
-          color: $white;
-        }
-        .fa-brands {
-          color: $red;
-          font-size: 1.2em;
-        }
-      }
+.home {
+  position: relative;
+  background-image: url(../img/background_home.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  .share {
+    z-index: 2;
+    position: fixed;
+    right: 15px;
+    bottom: 50%;
+    span {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      display: block;
+      margin-bottom: 1em;
+      color: $white;
+    }
+    .fa-brands {
+      color: $red;
+      font-size: 1.2em;
+    }
+  }
 
+  #svg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #svg path * {
+    stroke-linecap: square;
+    fill-opacity: 0;
+    transition: fill-opacity 1s;
+  }
+  #svg.finished * {
+    fill-opacity: 1;
+  }
+
+  .frame_right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .frame_left {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .vertical {
+    font-family: $font2;
+    border-right: 2px solid #a90000;
+    color: $red;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    animation-name: vertical;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    font-size: 0.8em;
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+    vertical-align: sub;
+    text-align: center;
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes vertical {
+  0% {
+    bottom: 10%;
+  }
+
+  50% {
+    bottom: 12%;
+  }
+
+  100% {
+    bottom: 10%;
+  }
 }
