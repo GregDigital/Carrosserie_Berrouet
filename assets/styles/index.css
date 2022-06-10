@@ -297,7 +297,9 @@ header .number span .fa-phone {
 }
 
 .service .container .container__infos {
-  border: solid 2px #a90000;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  border: solid 4px #a90000;
   width: 180px;
   height: 250px;
 }
@@ -313,7 +315,7 @@ header .number span .fa-phone {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .apropos {
@@ -339,18 +341,41 @@ header .number span .fa-phone {
 
 .apropos .img_garage {
   position: absolute;
-  bottom: -100px;
+  bottom: 100px;
   background-image: url(../img/garage.jpg);
+  background-attachment: fixed;
   height: 80%;
-  opacity: 0.15;
+  opacity: 0.1;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.apropos .b {
+  position: absolute;
+  width: 100%;
+  height: 46px;
+  background: black;
+  border-radius: 100px;
+  -webkit-filter: blur(5px);
+  filter: blur(10px);
+  top: -17px;
+}
+
+.apropos .blur {
+  position: absolute;
+  width: 100%;
+  height: 76px;
+  background: black;
+  border-radius: 100px;
+  -webkit-filter: blur(5px);
+  filter: blur(15px);
+  bottom: -18px;
+}
+
 .lateam {
-  height: 100vh;
+  position: relative;
 }
 
 .lateam h1 {
@@ -367,5 +392,79 @@ header .number span .fa-phone {
 
 .lateam h1 img:last-child {
   margin-left: 0.5em;
+}
+
+.lateam .container_team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lateam .container_team .team {
+  position: relative;
+  width: 50%;
+  background-image: url(../img/cadre.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 520px;
+}
+
+.lateam .container_team .team p {
+  left: 46%;
+  position: absolute;
+  bottom: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 36%;
+  font-size: 0.8em;
+}
+
+.realisation {
+  height: 80vh;
+}
+
+.realisation h1 {
+  font-size: 1.2em;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.realisation h1 img:first-child {
+  margin-right: 0.5em;
+}
+
+.realisation h1 img:last-child {
+  margin-left: 0.5em;
+}
+
+.contact {
+  height: 80vh;
+}
+
+.contact h1 {
+  font-size: 1.2em;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.contact h1 img:first-child(1) {
+  margin-right: 0.5em;
+}
+
+.contact h1 img:first-child(2) {
+  margin-left: 0.5em;
+}
+
+.contact .map img {
+  width: 100%;
+  height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
 }
 /*# sourceMappingURL=index.css.map */

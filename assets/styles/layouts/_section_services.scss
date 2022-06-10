@@ -29,7 +29,8 @@
     align-content: center;
     align-items: center;
     .container__infos {
-      border: solid 2px $red;
+      filter: blur(1px);
+      border: solid 4px $red;
       width: 180px;
       height: 250px;
     }
@@ -46,6 +47,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    opacity: 0.7;
+    opacity: 1;
   }
 }

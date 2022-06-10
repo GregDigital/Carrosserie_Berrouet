@@ -16,13 +16,34 @@
   }
   .img_garage {
     position: absolute;
-    bottom: -100px;
+    bottom: 100px;
     background-image: url(../img/garage.jpg);
+    background-attachment: fixed;
     height: 80%;
-    opacity: 0.15;
+    opacity: 0.1;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .b {
+    position: absolute;
+    width: 100%;
+    height: 46px;
+    background: black;
+    border-radius: 100px;
+    -webkit-filter: blur(5px);
+    filter: blur(10px);
+    top: -17px;
+  }
+  .blur {
+    position: absolute;
+    width: 100%;
+    height: 76px;
+    background: black;
+    border-radius: 100px;
+    -webkit-filter: blur(5px);
+    filter: blur(15px);
+    bottom: -18px;
   }
 }
