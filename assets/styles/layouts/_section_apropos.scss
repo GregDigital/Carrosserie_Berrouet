@@ -1,11 +1,11 @@
 .apropos {
-  height: 100vh;
+  height: 80vh;
   position: relative;
   h1 {
     font-size: 1.2em;
     font-family: $font1;
     text-transform: uppercase;
-    margin-top: 1em;
+    margin-top: 3em;
     text-align: center;
     img:first-child {
       margin-right: 0.5em;
@@ -16,10 +16,10 @@
   }
   .img_garage {
     position: absolute;
-    bottom: 100px;
+    bottom: -50px;
     background-image: url(../img/garage.jpg);
     background-attachment: fixed;
-    height: 80%;
+    height: 100%;
     opacity: 0.1;
     width: 100%;
     background-position: center;
@@ -45,5 +45,25 @@
     -webkit-filter: blur(5px);
     filter: blur(15px);
     bottom: -18px;
+  }
+}
+
+.container_apropos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 50vh;
+  justify-items: center;
+  margin-top: 5em;
+  .text_apropos {
+    width: 80%;
+    display: grid;
+    align-self: start;
+    border: solid 2px red;
+    padding: 2.5em;
+    font-size: 0.9em;
+    text-align: justify;
+  }
+  .item1 {
+    align-self: center;
   }
 }

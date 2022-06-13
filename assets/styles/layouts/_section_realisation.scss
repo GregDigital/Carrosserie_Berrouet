@@ -13,4 +13,34 @@
       margin-left: 0.5em;
     }
   }
+  .text_realisation {
+    width: 70%;
+    font-size: 0.9em;
+    margin: 4em auto 4em auto;
+    text-align: justify;
+  }
+
+  .container_realisation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6vmin;
+    overflow: hidden;
+    transform: skew(5deg);
+  }
+
+  .right {
+    width: 180px;
+    height: 322px;
+    background: #151515;
+    border: solid 2px red;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 1s ease-in-out;
+      filter: grayscale(100%);
+    }
+  }
 }
