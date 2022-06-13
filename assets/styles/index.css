@@ -318,6 +318,18 @@ header .number span .fa-phone {
   opacity: 1;
 }
 
+.reveal1 {
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
 .apropos {
   height: 100vh;
   position: relative;
@@ -458,6 +470,15 @@ header .number span .fa-phone {
 
 .contact h1 img:first-child(2) {
   margin-left: 0.5em;
+}
+
+.contact .car img {
+  width: 40%;
+}
+
+.contact .map {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .contact .map img {
