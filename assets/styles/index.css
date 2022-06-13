@@ -521,15 +521,13 @@ header .number span .fa-phone {
           align-items: center;
   margin: 6vmin;
   overflow: hidden;
-  -webkit-transform: skew(5deg);
-          transform: skew(5deg);
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
 }
 
 .realisation .right {
   width: 180px;
   height: 322px;
-  background: #151515;
-  border: solid 2px red;
 }
 
 .realisation .right img {
@@ -537,10 +535,17 @@ header .number span .fa-phone {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+.realisation .right img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .contact {
