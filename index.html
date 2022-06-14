@@ -207,10 +207,26 @@
         <img src="./assets/img/car.png" alt="">
       </div>
       <div class="map">
-
         <a href="https://goo.gl/maps/LEXw6EbxMDsWNbK89" target="_blank" title="aller vers le site google map">
           <img src="./assets/img/map_berrouet.png" alt="localisation du garage" /></a>
+        <form action="">
+          <input name="name" id="name" type="text" class="feedback-input" placeholder="Quel est votre nom ?" />
+
+          <input name="prenom" id="prenom" type="text" class="feedback-input" placeholder="Quel est votre prénom ?" />
+          <input name="mobile" id="mobile" type="number" class="feedback-input" placeholder="Quel est votre prénom ?" />
+
+          <input name="email" id="email" type="text" class="feedback-input"
+            placeholder="Quel est votre adresse mail ?" />
+
+          <textarea name="message" id="message" class="feedback-input" placeholder="Écrivez votre message"></textarea>
+          <input type="file" id="picture" name="picture" accept="image/png, image/jpeg">
+          <div class="button-area">
+            <input type="submit" name="envoyer" value="Envoyer" />
+            <span></span>
+          </div>
+        </form>
       </div>
+
   </section>
 
   <footer></footer>
