@@ -263,7 +263,7 @@ header .number span .fa-phone {
   font-size: 1.2em;
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
-  margin-top: 1em;
+  margin-top: 3em;
   text-align: center;
 }
 
@@ -521,13 +521,13 @@ header .number span .fa-phone {
           align-items: center;
   margin: 6vmin;
   overflow: hidden;
-  -webkit-transform: skew(10deg);
-          transform: skew(10deg);
+  -webkit-transform: skew(8deg);
+          transform: skew(8deg);
 }
 
 .realisation .right {
   width: 180px;
-  height: 390px;
+  height: 490px;
 }
 
 .realisation .right img {
@@ -535,8 +535,8 @@ header .number span .fa-phone {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
@@ -560,16 +560,21 @@ header .number span .fa-phone {
   text-align: center;
 }
 
-.contact h1 img:first-child(1) {
+.contact h1 img:first-child {
   margin-right: 0.5em;
 }
 
-.contact h1 img:first-child(2) {
+.contact h1 img:last-child {
   margin-left: 0.5em;
 }
 
-.contact .car img {
+.contact .car {
+  margin: 0 auto 0 auto;
   width: 40%;
+}
+
+.contact .car img {
+  width: 100%;
 }
 
 .contact .map {
@@ -593,15 +598,134 @@ header .number span .fa-phone {
           filter: grayscale(0%);
 }
 
-.contact .map form {
-  opacity: 0.5;
+.contact .map .form {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.8;
   position: absolute;
   z-index: 1;
   top: -70px;
   right: 4%;
+  width: 320px;
+  height: 450px;
+  background-color: #050505;
+  border: solid 0.3px red;
+}
+
+.contact .map form {
+  position: absolute;
+  z-index: 1;
+  top: -50px;
+  right: 4%;
   width: 300px;
   height: 400px;
-  background-color: #050505;
+}
+
+.contact .map .feedback-input {
+  color: white;
+  font-weight: 400;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 1px #a90000;
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8em;
+  padding: 0.2em;
+  margin-bottom: 14px;
+  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.contact .map .feedback-input:nth-child(5) {
+  background: rgba(39, 39, 39, 0.486);
+  border: none;
+  border-radius: 1em;
+}
+
+.contact .map .select-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .map .select-picture span {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  color: #575757;
+  font-style: italic;
+}
+
+.contact .map .file-upload {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #a90000;
+  overflow: hidden;
+  background-size: 100% 200%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #ffffff;
+  font-size: 0.9em;
+}
+
+.contact .map .file-upload input[type="file"] {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.contact .map textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+  text-align: center;
+  resize: none;
+}
+
+.contact .map input[type="text"],
+.contact .map textarea {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.contact .map input[type="submit"] {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: solid 1px #a90000;
+  background-color: transparent;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.contact .map .button-area {
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */
