@@ -40,3 +40,9 @@ body {
   background-color: #000;
 }
 
+.mask {
+  visibility: hidden;
+  position: relative;
+
+  overflow: hidden;
+}

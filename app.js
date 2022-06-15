@@ -9,13 +9,39 @@ new Vivus(
   }
 );
 
-var controller = new ScrollMagic.Controller();
-new ScrollMagic.Scene({
-  triggerElement: "#trigger1",
-  triggerHook: 0.9, // show, when scrolled 10% into view
-  duration: "80%", // hide 10% before exiting view (80% + 10% from bottom)
-  offset: 50, // move trigger to center of element
-})
-  .setClassToggle("#reveal1", "visible") // add class to reveal
-  .addIndicators({ name: "GSAP" }) // add indicators (requires plugin) // add indicators (requires plugin)
-  .addTo(controller);
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  autoSleep: 60,
+  force3D: false,
+  nullTargetWarn: false,
+  trialWarn: false,
+  units: { left: "%", top: "%", rotation: "rad" },
+});
+
+let masks = document.querySelectorAll(".mask");
+
+masks.forEach((mask) => {
+  let image = mask.querySelector("section");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: mask,
+      toggleActions: "restart none none reset",
+    },
+  });
+
+  tl.set(mask, { autoAlpha: 1 });
+
+  tl.from(mask, 2, {
+    yPercent: -3,
+    ease: Power2.out,
+    opacity: 0,
+  });
+  tl.from(image, 2, {
+    yPercent: -3,
+    delay: -2.5,
+    ease: Power2.out,
+    opacity: 1,
+  });
+});
