@@ -40,7 +40,7 @@ masks.forEach((mask) => {
   });
   tl.from(image, 2, {
     yPercent: -3,
-    delay: -2.5,
+    delay: -2,
     ease: Power2.out,
     opacity: 1,
   });
