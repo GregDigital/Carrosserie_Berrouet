@@ -4,27 +4,27 @@ let items = document.querySelectorAll(".item");
 function show(response) {
   let acc = [];
   for (let img of response.car) {
-    acc.push(lightbox(img));
+    acc.push(afficher(img));
   }
   let html = acc.reduce((a, l) => a + l);
   container.innerHTML = html;
   afficher(response.car);
-  light();
+}
+
+function light() {
+  const conta = document.querySelector(".cont");
+  document.querySelector(".slider").addEventListener("input", (e) => {
+    conta.style.setProperty("--position", `${e.target.value}%`);
+  });
 }
 
 function afficher(user) {
   items.forEach((item) => {
     item.addEventListener("click", (e) => {
-      if (user.id == parent) {
-        console.log(parent);
-      }
-    });
-  });
-}
-
-function lightbox(user) {
-  console.log("ok");
-  return `
+      let parent = item.dataset.id;
+      if (parent == user.id) {
+        console.log("ok");
+        return `
         <div class="image-container">
         <img
           class="image-before slider-image"
@@ -52,12 +52,10 @@ function lightbox(user) {
       
       </div>
           `;
-}
-
-function light() {
-  const conta = document.querySelector(".cont");
-  document.querySelector(".slider").addEventListener("input", (e) => {
-    conta.style.setProperty("--position", `${e.target.value}%`);
+      } else {
+        return ` `;
+      }
+    });
   });
 }
 

@@ -1,5 +1,6 @@
 {
-    "car": [{
+    "car": [
+        {
             "id": 1,
             "after": "golf_after.jpg",
             "before": "golf_before.jpg"
@@ -11,8 +12,8 @@
         },
         {
             "id": 3,
-            "after": "golf_after.jpg",
-            "before": "golf_before.jpg"
+            "after": "fiat_after.jpg",
+            "before": "fiat_before.jpg"
         },
         {
             "id": 4,
@@ -29,7 +30,5 @@
             "after": "golf_after.jpg",
             "before": "golf_before.jpg"
         }
-
     ]
-  
 }
