@@ -1,16 +1,35 @@
 {
-    "golf": [{
-           
+    "car": [{
+            "id": 1,
             "after": "golf_after.jpg",
             "before": "golf_before.jpg"
-            
+        },
+        {
+            "id": 2,
+            "after": "golf_after.jpg",
+            "before": "golf_before.jpg"
+        },
+        {
+            "id": 3,
+            "after": "golf_after.jpg",
+            "before": "golf_before.jpg"
+        },
+        {
+            "id": 4,
+            "after": "golf_after.jpg",
+            "before": "golf_before.jpg"
+        },
+        {
+            "id": 5,
+            "after": "golf_after.jpg",
+            "before": "golf_before.jpg"
+        },
+        {
+            "id": 6,
+            "after": "golf_after.jpg",
+            "before": "golf_before.jpg"
         }
 
-    ],
-    "fiat": [{
-        "after": "MimiKeel.jpg",
-        "before": "MimiKeel.jpg"
-        }
-       
     ]
+  
 }
