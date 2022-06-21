@@ -2,13 +2,21 @@ let container = document.querySelector(".cont");
 let items = document.querySelectorAll(".item");
 
 function show(response) {
-  let acc = [];
-  for (let img of response.car) {
-    acc.push(afficher(img));
-  }
-  let html = acc.reduce((a, l) => a + l);
-  container.innerHTML = html;
-  afficher(response.car);
+  items.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      let id = item.dataset.id;
+      let acc = [];
+      for (let img of response.car) {
+        if (id == img.id) {
+          acc.push(afficher(img));
+        }
+      }
+
+      let html = acc.reduce((a, l) => a + l);
+      container.innerHTML = html;
+      light();
+    });
+  });
 }
 
 function light() {
@@ -19,12 +27,7 @@ function light() {
 }
 
 function afficher(user) {
-  items.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      let parent = item.dataset.id;
-      if (parent == user.id) {
-        console.log("ok");
-        return `
+  return `
         <div class="image-container">
         <img
           class="image-before slider-image"
@@ -52,11 +55,6 @@ function afficher(user) {
       
       </div>
           `;
-      } else {
-        return ` `;
-      }
-    });
-  });
 }
 
 fetch("afterbefore.json")
