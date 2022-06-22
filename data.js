@@ -4,6 +4,7 @@ let items = document.querySelectorAll(".item");
 function show(response) {
   items.forEach((item) => {
     item.addEventListener("click", (e) => {
+      container.style.display = "grid";
       let id = item.dataset.id;
       let acc = [];
       for (let img of response.car) {

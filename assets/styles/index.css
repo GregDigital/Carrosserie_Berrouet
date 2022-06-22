@@ -753,8 +753,7 @@ main {
 }
 
 .cont {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   place-content: center;
   position: relative;
   overflow: hidden;
