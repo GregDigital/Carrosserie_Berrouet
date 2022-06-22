@@ -1,14 +1,95 @@
-.lightbox {
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.video-container {
-  margin: 2rem;
-  max-height: 300px;
+.lightbox {
+  display: none;
+  place-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.883);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow: auto;
+  animation: lightbox 0.5s;
+  transition: opacity 0.3s;
+}
+
+.close {
+  position: absolute;
+  right: 45px;
+  top: 50px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  animation: lightbox 0.5s;
+  transition: opacity 0.3s;
+}
+
+.close:before,
+.close:after {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  height: 33px;
+  width: 2px;
+  background-color: rgb(255, 255, 255);
+}
+.close:before {
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+}
+.close:after {
+  background-color: rgb(255, 255, 255);
+  transform: rotate(-45deg);
+}
+
+@keyframes lightbox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cont {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  --position: 50%;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.image-container {
+  width: 80vw;
+  height: 80vh;
+  aspect-ratio: 1/1;
+}
+
+.lightbox-close {
+  cursor: pointer;
+  position: absolute;
+  right: -35px;
+  top: 0;
+}
+
+.fa-xmark-large {
+  color: #fff;
+  font-size: 3em;
 }
 
 main {
@@ -17,35 +98,17 @@ main {
   min-height: 100vh;
 }
 
-.cont {
-  display: none;
-  place-content: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  --position: 50%;
-  width: 100%;
-  margin: 0 auto;
-  background: rgb(49, 49, 49);
-  height: 100vh;
-}
-
-.image-container {
-  aspect-ratio: 1/1;
-}
-
 .slider-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: center;
 }
 
 .image-before {
   position: absolute;
   inset: 0;
   width: var(--position);
-  filter: grayscale(100%);
 }
 
 .slider {

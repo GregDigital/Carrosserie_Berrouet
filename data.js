@@ -1,10 +1,12 @@
 let container = document.querySelector(".cont");
+let lightbox = document.querySelector(".lightbox");
 let items = document.querySelectorAll(".item");
+let close = document.querySelector(".close");
 
 function show(response) {
   items.forEach((item) => {
     item.addEventListener("click", (e) => {
-      container.style.display = "grid";
+      lightbox.style.display = "grid";
       let id = item.dataset.id;
       let acc = [];
       for (let img of response.car) {
@@ -16,7 +18,14 @@ function show(response) {
       let html = acc.reduce((a, l) => a + l);
       container.innerHTML = html;
       light();
+      displayClose();
     });
+  });
+}
+
+function displayClose() {
+  close.addEventListener("click", (e) => {
+    lightbox.style.display = "none";
   });
 }
 
@@ -30,6 +39,7 @@ function light() {
 function afficher(user) {
   return `
         <div class="image-container">
+       
         <img
           class="image-before slider-image"
          src="../assets/img/${user.before}"
