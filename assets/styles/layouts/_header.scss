@@ -65,14 +65,126 @@ header {
     }
   }
 
-  .number{
-      margin-right: 1em;
-      font-family: $font1;
-      span{
-        font-size: 0.9em;
-        .fa-phone{
+  .number {
+    margin-right: 1em;
+    font-family: $font1;
+    span {
+      font-size: 0.9em;
+      .fa-phone {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 990px) {
+    .menu_toggle {
+      height: 50px;
+      position: fixed;
+      right: 25px;
+      top: 25px;
+      width: 50px;
+      z-index: 999;
+      padding: 5px;
+    }
+    .active {
+      .oneRod {
+        transform: rotate(45deg) translate(7px, 7px);
+      }
+      .twoRod {
+        opacity: 0;
+      }
+      .threeRod {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+    }
+
+    .oneRod,
+    .twoRod,
+    .threeRod {
+      background: $red;
+      transition-duration: 0.3s;
+      width: 25px;
+      height: 3px;
+      margin: 6px;
+      backface-visibility: hidden;
+    }
+
+    .t {
+      z-index: 10;
+      position: fixed;
+      top: 0;
+      text-align: center;
+      &.overlay {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.883);
+        height: 100vh;
+        width: 100vw;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-content: center;
+      ul {
+        flex-direction: column;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+
+        li {
+          position: relative;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+          color: $white;
+          font-size: 0.9em;
+          font-family: $font1;
+          margin-right: 2em;
+          img {
+            width: 16px;
+            height: 16px;
             margin-right: 1em;
+          }
+        }
+        .pistolet {
+          display: none;
+        }
+        li:hover > .pistolet {
+          display: block;
+          width: 18px;
+          background-image: url(../img/pistolet.png);
+          background-repeat: no-repeat;
+          position: absolute;
+          right: -21px;
+          height: 18px;
+          bottom: -19px;
+          transition: ease 1s;
+        }
+
+        a {
+          position: relative;
+          &:after {
+            content: "";
+            position: absolute;
+            background-color: $red;
+            height: 2px;
+            width: 0;
+            right: 0;
+            bottom: -10px;
+            transition: 0.3s;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+          &:hover {
+            transition: 0.3s;
+            color: rgb(37, 133, 48);
+          }
         }
       }
+    }
   }
 }

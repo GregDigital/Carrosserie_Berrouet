@@ -146,6 +146,129 @@ header .number span .fa-phone {
   margin-right: 1em;
 }
 
+@media only screen and (max-width: 990px) {
+  header .menu_toggle {
+    height: 50px;
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    width: 50px;
+    z-index: 999;
+    padding: 5px;
+  }
+  header .active .oneRod {
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(7px, 7px);
+  }
+  header .active .twoRod {
+    opacity: 0;
+  }
+  header .active .threeRod {
+    -webkit-transform: rotate(-45deg) translate(5px, -6px);
+            transform: rotate(-45deg) translate(5px, -6px);
+  }
+  header .oneRod,
+  header .twoRod,
+  header .threeRod {
+    background: #a90000;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    width: 25px;
+    height: 3px;
+    margin: 6px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  header .t {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    text-align: center;
+  }
+  header .t.overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.883);
+    height: 100vh;
+    width: 100vw;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  header nav ul li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.9em;
+    font-family: "Nunito", sans-serif;
+    margin-right: 2em;
+  }
+  header nav ul li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 1em;
+  }
+  header nav ul .pistolet {
+    display: none;
+  }
+  header nav ul li:hover > .pistolet {
+    display: block;
+    width: 18px;
+    background-image: url(../img/pistolet.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -21px;
+    height: 18px;
+    bottom: -19px;
+    -webkit-transition: ease 1s;
+    transition: ease 1s;
+  }
+  header nav ul a {
+    position: relative;
+  }
+  header nav ul a:after {
+    content: "";
+    position: absolute;
+    background-color: #a90000;
+    height: 2px;
+    width: 0;
+    right: 0;
+    bottom: -10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  header nav ul a:hover:after {
+    width: 100%;
+  }
+  header nav ul a:hover {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #258530;
+  }
+}
+
 .home {
   position: relative;
   background-image: url(../img/background_home.png);
