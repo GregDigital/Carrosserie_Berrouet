@@ -1,6 +1,6 @@
 .lateam {
   position: relative;
-  top: -20%;
+  //top: -20%;
   h1 {
     font-size: 1.2em;
     font-family: $font1;
@@ -25,13 +25,45 @@
       background-size: contain;
       background-position: center;
       height: 520px;
-      p {
-        left: 46%;
+      .team_info {
+        left: 50%;
         position: absolute;
         bottom: 50px;
         transform: translate(-50%, -50%);
-        width: 36%;
+        width: 50%;
         font-size: 0.8em;
+        h2 {
+          font-family: $font1;
+          text-align: center;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .lateam {
+    position: relative;
+    //top: -20%;
+    h1 {
+      font-size: 1.2em;
+      font-family: $font1;
+      text-transform: uppercase;
+      margin-top: 1em;
+      text-align: center;
+      img:first-child {
+        margin-right: 0.5em;
+      }
+      img:last-child {
+        margin-left: 0.5em;
+      }
+    }
+    .container_team {
+      display: block;
+      margin-top: 5em;
+      .team {
+        width: 100%;
       }
     }
   }

@@ -25,6 +25,7 @@
   .container {
     margin: 6em auto 6em auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
     align-items: center;

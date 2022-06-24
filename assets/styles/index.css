@@ -61,7 +61,16 @@ header {
   padding: 0 1em 0 1em;
 }
 
-header nav ul {
+header .t {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .t nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +78,7 @@ header nav ul {
       justify-content: space-around;
 }
 
-header nav ul li {
+header .t nav ul li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,17 +93,17 @@ header nav ul li {
   margin-right: 2em;
 }
 
-header nav ul li img {
+header .t nav ul li img {
   width: 16px;
   height: 16px;
   margin-right: 1em;
 }
 
-header nav ul .pistolet {
+header .t nav ul .pistolet {
   display: none;
 }
 
-header nav ul li:hover > .pistolet {
+header .t nav ul li:hover > .pistolet {
   display: block;
   width: 18px;
   background-image: url(../img/pistolet.png);
@@ -107,11 +116,11 @@ header nav ul li:hover > .pistolet {
   transition: ease 1s;
 }
 
-header nav ul a {
+header .t nav ul a {
   position: relative;
 }
 
-header nav ul a:after {
+header .t nav ul a:after {
   content: "";
   position: absolute;
   background-color: #a90000;
@@ -123,26 +132,26 @@ header nav ul a:after {
   transition: 0.3s;
 }
 
-header nav ul a:hover:after {
+header .t nav ul a:hover:after {
   width: 100%;
 }
 
-header nav ul a:hover {
+header .t nav ul a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #258530;
 }
 
-header .number {
+header .t .number {
   margin-right: 1em;
   font-family: "Nunito", sans-serif;
 }
 
-header .number span {
+header .t .number span {
   font-size: 0.9em;
 }
 
-header .number span .fa-phone {
+header .t .number span .fa-phone {
   margin-right: 1em;
 }
 
@@ -150,8 +159,8 @@ header .number span .fa-phone {
   header .menu_toggle {
     height: 50px;
     position: fixed;
-    right: 25px;
-    top: 25px;
+    right: 10px;
+    top: 10px;
     width: 50px;
     z-index: 999;
     padding: 5px;
@@ -180,14 +189,16 @@ header .number span .fa-phone {
             backface-visibility: hidden;
   }
   header .t {
+    display: none;
     z-index: 10;
     position: fixed;
     top: 0;
+    left: 0;
     text-align: center;
   }
   header .t.overlay {
     display: block;
-    background-color: rgba(0, 0, 0, 0.883);
+    background-color: rgba(0, 0, 0, 0.781);
     height: 100vh;
     width: 100vw;
   }
@@ -205,11 +216,10 @@ header .number span .fa-phone {
             flex-direction: column;
     padding: 0;
     position: absolute;
-    left: 50%;
+    left: 53%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 90%;
   }
   header nav ul li {
     position: relative;
@@ -220,6 +230,7 @@ header .number span .fa-phone {
         -ms-flex-align: center;
             align-items: center;
     text-transform: uppercase;
+    margin-bottom: 3em;
     color: white;
     font-size: 0.9em;
     font-family: "Nunito", sans-serif;
@@ -266,6 +277,22 @@ header .number span .fa-phone {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     color: #258530;
+  }
+  header .number {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin-right: 0;
+    font-family: "Nunito", sans-serif;
+    color: #a90000;
+  }
+  header .number span {
+    font-size: 0.9em;
+  }
+  header .number span .fa-phone {
+    margin-right: 1em;
   }
 }
 
@@ -384,6 +411,18 @@ header .number span .fa-phone {
   }
 }
 
+@media only screen and (max-width: 990px) {
+  .home #svg {
+    width: 343px;
+  }
+}
+
+@media only screen and (max-width: 448px) {
+  .home #svg {
+    width: 243px;
+  }
+}
+
 .service {
   position: relative;
 }
@@ -416,6 +455,8 @@ header .number span .fa-phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-line-pack: center;
@@ -563,9 +604,56 @@ header .number span .fa-phone {
       align-self: center;
 }
 
+@media only screen and (max-width: 990px) {
+  .apropos {
+    height: auto;
+  }
+  .apropos .container_apropos {
+    height: auto;
+  }
+  .service .container .container__infos {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .apropos {
+    height: auto;
+  }
+  .apropos .container_apropos {
+    display: block;
+    height: auto;
+  }
+  .apropos .container_apropos .text_apropos {
+    margin: 0 auto 2em auto;
+  }
+  .service .container .container__infos {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  #img_peinture {
+    height: 180px;
+  }
+  #img_peinture p {
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #img_peinture {
+    height: 130px;
+  }
+  #img_peinture p {
+    font-size: 0.8em;
+    letter-spacing: 0;
+  }
+}
+
 .lateam {
   position: relative;
-  top: -20%;
 }
 
 .lateam h1 {
@@ -601,14 +689,46 @@ header .number span .fa-phone {
   height: 520px;
 }
 
-.lateam .container_team .team p {
-  left: 46%;
+.lateam .container_team .team .team_info {
+  left: 50%;
   position: absolute;
   bottom: 50px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 36%;
+  width: 50%;
   font-size: 0.8em;
+}
+
+.lateam .container_team .team .team_info h2 {
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 740px) {
+  .lateam {
+    position: relative;
+  }
+  .lateam h1 {
+    font-size: 1.2em;
+    font-family: "Nunito", sans-serif;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+  }
+  .lateam h1 img:first-child {
+    margin-right: 0.5em;
+  }
+  .lateam h1 img:last-child {
+    margin-left: 0.5em;
+  }
+  .lateam .container_team {
+    display: block;
+    margin-top: 5em;
+  }
+  .lateam .container_team .team {
+    width: 100%;
+  }
 }
 
 .realisation {
@@ -951,7 +1071,6 @@ header .number span .fa-phone {
 }
 
 img {
-  display: block;
   max-width: 100%;
 }
 
