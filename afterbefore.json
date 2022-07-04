@@ -7,8 +7,8 @@
         },
         {
             "id": 2,
-            "after": "golf_after.jpg",
-            "before": "golf_before.jpg"
+            "after": "suv_after.jpg",
+            "before": "suv_before.jpg"
         },
         {
             "id": 3,
@@ -17,18 +17,18 @@
         },
         {
             "id": 4,
-            "after": "golf_after.jpg",
-            "before": "golf_before.jpg"
+            "after": "phare_after.jpg",
+            "before": "phare_before.jpg"
         },
         {
             "id": 5,
-            "after": "golf_after.jpg",
-            "before": "golf_before.jpg"
+            "after": "chassis_after.jpg",
+            "before": "chassis_before.jpg"
         },
         {
             "id": 6,
-            "after": "golf_after.jpg",
-            "before": "golf_before.jpg"
+            "after": "aile_after.jpg",
+            "before": "aile_before.jpg"
         }
     ]
 }
