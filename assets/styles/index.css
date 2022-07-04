@@ -467,11 +467,22 @@ header .t .number span .fa-phone {
 }
 
 .service .container .container__infos {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-  border: solid 4px #a90000;
+  background-color: #121111;
+  text-align: center;
+  border: solid 2px #a90000;
   width: 180px;
   height: 250px;
+}
+
+.service .container .container__infos img {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.service .container .container__infos h2 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
 }
 
 #img_peinture {

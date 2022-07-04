@@ -31,10 +31,20 @@
     align-content: center;
     align-items: center;
     .container__infos {
-      filter: blur(1px);
-      border: solid 4px $red;
+      background-color: rgb(18, 17, 17);
+     text-align: center;
+      border: solid 2px $red;
       width: 180px;
       height: 250px;
+      img{
+        margin-top: 2em;
+        margin-bottom: 1em;
+      }
+      h2{
+        font-size: 1em;
+        font-family: $font2;
+        text-transform: uppercase;
+      }
     }
   }
 }
