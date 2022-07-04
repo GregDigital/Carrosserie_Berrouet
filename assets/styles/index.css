@@ -689,10 +689,19 @@ header .t .number span .fa-phone {
   height: 520px;
 }
 
+.lateam .container_team .team img {
+  width: 140px;
+  left: 50%;
+  position: absolute;
+  top: 110px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .lateam .container_team .team .team_info {
   left: 50%;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 50%;
