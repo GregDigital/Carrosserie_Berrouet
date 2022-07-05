@@ -9,6 +9,7 @@
 .lightbox {
   display: none;
   place-items: center;
+  z-index: 1000;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.883);
   width: 100vw;
@@ -151,4 +152,17 @@ main {
   pointer-events: none;
   /* z-index: 100; */
   //box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
+}
+
+@media only screen and (max-width: 900px) {
+   
+.close{
+  right: 7px;
+  top: 10px;
+}
+.image-container {
+  width: 90vw;
+  height: 40vh;
+  aspect-ratio: 1/1;
+}
 }

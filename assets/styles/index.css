@@ -817,6 +817,12 @@ header .t .number span .fa-phone {
           transform: scale(1.1);
 }
 
+@media only screen and (max-width: 480px) {
+  .realisation {
+    height: auto;
+  }
+}
+
 .contact {
   height: 80vh;
 }
@@ -1000,7 +1006,7 @@ header .t .number span .fa-phone {
 
 @media only screen and (max-width: 480px) {
   .contact {
-    height: 70vh;
+    height: 100vh;
   }
   .contact .map .form {
     -webkit-filter: blur(3px);
@@ -1065,7 +1071,7 @@ footer .follow .fa-brands {
 }
 
 footer .mention {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #a90000;
   font-size: 0.9em;
   text-decoration: none;
@@ -1073,7 +1079,7 @@ footer .mention {
 }
 
 footer .copyright {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #a90000;
   font-size: 0.9em;
   text-decoration: none;
@@ -1104,6 +1110,7 @@ footer .copyright {
 .lightbox {
   display: none;
   place-items: center;
+  z-index: 1000;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.883);
   width: 100vw;
@@ -1271,5 +1278,17 @@ main {
           transform: translate(-50%, -50%);
   pointer-events: none;
   /* z-index: 100; */
+}
+
+@media only screen and (max-width: 900px) {
+  .close {
+    right: 7px;
+    top: 10px;
+  }
+  .image-container {
+    width: 90vw;
+    height: 40vh;
+    aspect-ratio: 1/1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
