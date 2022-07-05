@@ -817,14 +817,14 @@ header .t .number span .fa-phone {
           transform: scale(1.1);
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 900px) {
   .realisation {
     height: auto;
   }
 }
 
 .contact {
-  height: 80vh;
+  height: 100vh;
 }
 
 .contact h1 {
@@ -1004,7 +1004,7 @@ header .t .number span .fa-phone {
   text-align: center;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 900px) {
   .contact {
     height: 100vh;
   }
@@ -1086,7 +1086,7 @@ footer .copyright {
   display: block;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 900px) {
   footer img {
     width: 90px;
   }
