@@ -414,7 +414,7 @@ header .t .number span .fa-phone {
 @media only screen and (max-width: 990px) {
   .home #svg {
     width: 343px;
-    left: 35%;
+    left: 50%;
   }
   .home .frame_left {
     top: 54%;
@@ -1284,6 +1284,56 @@ main {
     width: 90vw;
     height: 40vh;
     aspect-ratio: 1/1;
+  }
+}
+
+.s {
+  position: relative;
+}
+
+.mentions_legales {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.mentions_legales h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.mentions_legales .description_mentions {
+  border: solid 2px #a90000;
+  height: auto;
+  border-radius: 2em;
+  margin-top: 2em;
+  padding: 1.5em;
+}
+
+.mentions_legales .description_mentions p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.mentions_legales .description_mentions h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.mentions_legales .description_mentions .p_mentions {
+  font-size: 1em;
+  color: white;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+
+@media only screen and (max-width: 900px) {
+  .mentions_legales {
+    margin: 3em 1em 5em 1em;
   }
 }
 /*# sourceMappingURL=index.css.map */
