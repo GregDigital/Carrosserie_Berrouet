@@ -330,7 +330,7 @@ header .t .number span .fa-phone {
 .home #svg {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 35%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -378,9 +378,9 @@ header .t .number span .fa-phone {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   font-size: 0.8em;
-  -webkit-writing-mode: sideways-lr;
-      -ms-writing-mode: sideways-lr;
-          writing-mode: sideways-lr;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
   text-orientation: mixed;
   vertical-align: sub;
   text-align: center;
@@ -414,12 +414,19 @@ header .t .number span .fa-phone {
 @media only screen and (max-width: 990px) {
   .home #svg {
     width: 343px;
+    left: 35%;
+  }
+  .home .frame_left {
+    top: 54%;
   }
 }
 
 @media only screen and (max-width: 448px) {
   .home #svg {
     width: 243px;
+  }
+  .home .frame_left {
+    top: 53%;
   }
 }
 
@@ -823,10 +830,6 @@ header .t .number span .fa-phone {
   }
 }
 
-.contact {
-  height: 100vh;
-}
-
 .contact h1 {
   font-size: 1.2em;
   font-family: "Nunito", sans-serif;
@@ -855,7 +858,7 @@ header .t .number span .fa-phone {
 .contact .map {
   position: relative;
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 10em;
 }
 
 .contact .map img {
@@ -1006,7 +1009,7 @@ header .t .number span .fa-phone {
 
 @media only screen and (max-width: 900px) {
   .contact {
-    height: 100vh;
+    height: auto;
   }
   .contact .map .form {
     -webkit-filter: blur(3px);
@@ -1042,9 +1045,13 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 5em;
+  height: 4em;
   padding-right: 0.5em;
   padding-left: 0.5em;
+}
+
+footer img {
+  width: 80px;
 }
 
 footer span {
@@ -1073,7 +1080,7 @@ footer .follow .fa-brands {
 footer .mention {
   font-family: "Roboto", sans-serif;
   color: #a90000;
-  font-size: 0.9em;
+  font-size: 0.7em;
   text-decoration: none;
   display: block;
 }
@@ -1081,21 +1088,9 @@ footer .mention {
 footer .copyright {
   font-family: "Roboto", sans-serif;
   color: #a90000;
-  font-size: 0.9em;
+  font-size: 0.7em;
   text-decoration: none;
   display: block;
-}
-
-@media only screen and (max-width: 900px) {
-  footer img {
-    width: 90px;
-  }
-  footer .mention {
-    font-size: 0.7em;
-  }
-  footer .copyright {
-    font-size: 0.7em;
-  }
 }
 
 *,
