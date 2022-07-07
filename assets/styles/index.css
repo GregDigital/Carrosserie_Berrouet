@@ -469,10 +469,14 @@ header .t .number span .fa-phone {
   margin-left: 0.5em;
 }
 
+.service a {
+  color: #a90000;
+}
+
 .service .text_service {
   width: 70%;
   font-size: 0.9em;
-  margin: 4em auto 0 auto;
+  margin: 2em auto 0 auto;
   text-align: justify;
 }
 
@@ -514,6 +518,7 @@ header .t .number span .fa-phone {
 #img_peinture {
   display: block;
   margin-top: 4em;
+  margin-bottom: 4em;
   background-attachment: fixed;
   background-image: url(../img/img_peinture.png);
   width: 100%;
