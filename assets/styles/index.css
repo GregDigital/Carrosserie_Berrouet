@@ -387,6 +387,13 @@ header .t .number span .fa-phone {
   letter-spacing: 4px;
 }
 
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @-webkit-keyframes vertical {
   0% {
     bottom: 10%;
