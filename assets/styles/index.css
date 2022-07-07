@@ -296,15 +296,6 @@ header .t .number span .fa-phone {
   }
 }
 
-.home {
-  position: relative;
-  background-image: url(../img/background_home.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .home .share {
   z-index: 2;
   position: fixed;
