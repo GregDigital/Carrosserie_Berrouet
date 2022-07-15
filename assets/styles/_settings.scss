@@ -21,6 +21,7 @@ $red: #a90000;
 }
 p {
   font-family: $font2;
+  font-size: 1em;
 }
 li {
   list-style: none;
@@ -46,3 +47,8 @@ body {
 
   overflow: hidden;
 }
+
+@media only screen and (max-width: 900px) {
+   
+p{font-size: 0.9em;}
+  }

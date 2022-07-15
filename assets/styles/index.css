@@ -18,6 +18,7 @@
 
 p {
   font-family: "Roboto", sans-serif;
+  font-size: 1em;
 }
 
 li {
@@ -42,6 +43,12 @@ body {
   visibility: hidden;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+  p {
+    font-size: 0.9em;
+  }
 }
 
 header {
@@ -475,7 +482,6 @@ header .t .number span .fa-phone {
 
 .service .text_service {
   width: 70%;
-  font-size: 0.9em;
   margin: 2em auto 0 auto;
   text-align: justify;
 }
@@ -563,8 +569,8 @@ header .t .number span .fa-phone {
 }
 
 .apropos {
-  height: 80vh;
   position: relative;
+  margin-top: 3em;
 }
 
 .apropos h1 {
@@ -636,7 +642,6 @@ header .t .number span .fa-phone {
       align-self: start;
   border: solid 2px red;
   padding: 2.5em;
-  font-size: 0.9em;
   text-align: justify;
 }
 
@@ -747,7 +752,6 @@ header .t .number span .fa-phone {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 50%;
-  font-size: 0.8em;
 }
 
 .lateam .container_team .team .team_info h2 {
@@ -780,10 +784,6 @@ header .t .number span .fa-phone {
   .lateam .container_team .team {
     width: 100%;
   }
-}
-
-.realisation {
-  height: 80vh;
 }
 
 .realisation h1 {

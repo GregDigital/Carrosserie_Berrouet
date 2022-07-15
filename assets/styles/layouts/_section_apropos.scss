@@ -1,6 +1,7 @@
 .apropos {
-  height: 80vh;
+  
   position: relative;
+  margin-top: 3em;
   h1 {
     font-size: 1.2em;
     font-family: $font1;
@@ -60,7 +61,7 @@
     align-self: start;
     border: solid 2px red;
     padding: 2.5em;
-    font-size: 0.9em;
+
     text-align: justify;
   }
   .item1 {
