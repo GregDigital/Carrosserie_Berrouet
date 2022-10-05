@@ -50,23 +50,16 @@
 }
 
 .container_apropos {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 50vh;
-  justify-items: center;
-  margin-top: 5em;
-  .text_apropos {
-    width: 80%;
-    display: grid;
-    align-self: start;
-    border: solid 2px red;
-    padding: 2.5em;
 
+
+  .text_apropos {
+    margin: 4em auto 0 auto;
+    width: 70%;
     text-align: justify;
+    line-height: 2.2;
+    letter-spacing: 1px;
   }
-  .item1 {
-    align-self: center;
-  }
+
 }
 
 @media only screen and (max-width: 990px) {
