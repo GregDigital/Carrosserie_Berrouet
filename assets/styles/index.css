@@ -45,6 +45,10 @@ body {
   overflow: hidden;
 }
 
+.true {
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 900px) {
   p {
     font-size: 0.9em;
@@ -979,6 +983,14 @@ header .t .number span .fa-phone {
   font-style: italic;
 }
 
+.contact .map .select-picture span ol li p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  color: #575757;
+  font-style: italic;
+}
+
 .contact .map .file-upload {
   height: 50px;
   width: 50px;
@@ -1319,7 +1331,15 @@ main {
   }
   .image-container {
     width: 90vw;
-    height: 40vh;
+    height: 80vh;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (orientation: landscape) {
+  .image-container {
+    width: 85vw;
+    height: 75vh;
     aspect-ratio: 1/1;
   }
 }

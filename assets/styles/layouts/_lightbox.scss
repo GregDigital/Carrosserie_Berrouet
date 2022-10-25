@@ -162,7 +162,15 @@ main {
 }
 .image-container {
   width: 90vw;
-  height: 40vh;
+  height: 80vh;
   aspect-ratio: 1/1;
 }
+}
+
+@media (orientation: landscape) {
+  .image-container {
+    width: 85vw;
+    height: 75vh;
+    aspect-ratio: 1/1;
+  }
 }

@@ -82,12 +82,20 @@
     .select-picture {
       display: flex;
       align-items: center;
-      span {
+      span  {
         font-family: $font1;
         font-size: 0.9em;
         margin-left: 0.5em;
         color: #575757;
         font-style: italic;
+        ol li p{
+          font-family: $font1;
+        font-size: 0.9em;
+        margin-left: 0.5em;
+        color: #575757;
+        font-style: italic;
+        }
+
       }
     }
     .file-upload {
