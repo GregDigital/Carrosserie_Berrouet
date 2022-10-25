@@ -2,13 +2,13 @@
 
 let burgerMenu = document.querySelector(".menu_toggle");
 let overlay = document.querySelector(".t");
-let body = document.querySelector("body");
+let scrollbody = document.querySelector("body");
 let tl = gsap.timeline();
 
 burgerMenu.addEventListener("click", function () {
   this.classList.toggle("active");
   overlay.classList.toggle("overlay");
-  body.classList.toggle("true");
+  scrollbody.classList.toggle("true");
 
   if (this.classList.contains("active")) {
     tl.from("li", {
@@ -30,7 +30,7 @@ for (let i = 0; i < menu.length; i++) {
   el.addEventListener("click", function () {
     overlay.classList.toggle("overlay");
     burgerMenu.classList.toggle("active");
-    body.classList.toggle("true");
+    scrollbody.classList.toggle("true");
 
     tl.from("li", {
       opacity: 1,
