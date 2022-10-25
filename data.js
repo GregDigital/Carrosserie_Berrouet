@@ -2,13 +2,14 @@ let container = document.querySelector(".cont");
 let lightbox = document.querySelector(".lightbox");
 let items = document.querySelectorAll(".item");
 let close = document.querySelector(".close");
-let body = document.querySelector("body");
+let scroll = document.querySelector("body");
 
 function show(response) {
   items.forEach((item) => {
     item.addEventListener("click", (e) => {
       lightbox.style.display = "grid";
-      body.classList.add("true");
+      scroll.classList.add("true");
+
       let id = item.dataset.id;
       let acc = [];
       for (let img of response.car) {
@@ -28,7 +29,7 @@ function show(response) {
 function displayClose() {
   close.addEventListener("click", (e) => {
     lightbox.style.display = "none";
-    body.classList.remove("true");
+    scroll.classList.remove("true");
   });
 }
 
@@ -41,6 +42,7 @@ function light() {
 
 function afficher(user) {
   return `
+        
         <div class="image-container">
        
         <img
