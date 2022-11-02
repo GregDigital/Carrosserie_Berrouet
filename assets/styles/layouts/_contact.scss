@@ -1,6 +1,6 @@
 .contact {
 
-
+padding-bottom: 1em;
   h1 {
     font-size: 1.2em;
     font-family: $font1;
@@ -128,8 +128,17 @@
       height: 150px;
       line-height: 150%;
       resize: vertical;
-      text-align: center;
       resize: none;
+      
+    }
+  
+    #message {
+      padding: 1em;
+      &::placeholder{
+        
+     text-align: center;
+       
+      }
     }
     input[type="text"],
     textarea {
@@ -143,6 +152,10 @@
       background-color: transparent;
       padding: 0.5em;
       width: 50%;
+      cursor: pointer;
+      &:hover{
+      
+      }
     }
     .button-area {
       text-align: center;

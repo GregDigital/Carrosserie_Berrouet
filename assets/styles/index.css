@@ -870,6 +870,10 @@ header .t .number span .fa-phone {
   }
 }
 
+.contact {
+  padding-bottom: 1em;
+}
+
 .contact h1 {
   font-size: 1.2em;
   font-family: "Nunito", sans-serif;
@@ -1028,8 +1032,27 @@ header .t .number span .fa-phone {
   height: 150px;
   line-height: 150%;
   resize: vertical;
-  text-align: center;
   resize: none;
+}
+
+.contact .map #message {
+  padding: 1em;
+}
+
+.contact .map #message::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.contact .map #message:-ms-input-placeholder {
+  text-align: center;
+}
+
+.contact .map #message::-ms-input-placeholder {
+  text-align: center;
+}
+
+.contact .map #message::placeholder {
+  text-align: center;
 }
 
 .contact .map input[type="text"],
@@ -1049,6 +1072,7 @@ header .t .number span .fa-phone {
   background-color: transparent;
   padding: 0.5em;
   width: 50%;
+  cursor: pointer;
 }
 
 .contact .map .button-area {

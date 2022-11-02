@@ -28,12 +28,17 @@ let menu = document.querySelectorAll("li");
 for (let i = 0; i < menu.length; i++) {
   const el = menu[i];
   el.addEventListener("click", function () {
-    overlay.classList.toggle("overlay");
-    burgerMenu.classList.toggle("active");
-    scrollbody.classList.toggle("true");
+    if (window.matchMedia("(max-width: 990px)").matches) {
+      overlay.classList.toggle("overlay");
+      burgerMenu.classList.toggle("active");
+      scrollbody.classList.toggle("true");
 
-    tl.from("li", {
-      opacity: 1,
-    });
+      tl.from("li", {
+        opacity: 1,
+      });
+    } else {
+      scrollbody.classList.toggle("false");
+      return;
+    }
   });
 }
