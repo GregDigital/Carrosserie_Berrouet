@@ -355,7 +355,12 @@
           <img src="./assets/img/map_berrouet.png" alt="localisation du garage"
         /></a>
         <div class="form"></div>
-        <form action="">
+        <form
+          enctype="multipart/form-data"
+          action="form.php"
+          method="post"
+          id="validForm"
+        >
           <input
             name="name"
             id="name"
@@ -365,8 +370,8 @@
           />
 
           <input
-            name="prenom"
-            id="prenom"
+            name="first"
+            id="first"
             type="text"
             class="feedback-input"
             placeholder="Prénom"
@@ -440,5 +445,6 @@
     <script src="data.js"></script>
     <script src="app.js"></script>
     <script src="burger.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>
