@@ -167,12 +167,10 @@ padding-bottom: 1em;
     }
     .formData[data-error]::after {
       content: attr(data-error);
+      font-family: $font1;
       font-size: 0.6em;
       color: #e54858;
-      display: block;
-      margin-top: 7px;
-      margin-bottom: 15px;
-      text-align: right;
+      display: inline-block;
       line-height: 0.3;
       opacity: 0;
       transition: 0.3s;
