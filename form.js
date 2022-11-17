@@ -1,14 +1,28 @@
 let form = document.querySelector("#validForm");
+let span = document.que;
 
 form.name.addEventListener("change", function () {
   validName(this);
 });
+let firstElt = false;
 
 const validName = function (inputName) {
-  if (!form.name.value.match(/(.*[a-z]){2}/i)) {
-    console.log("faux");
+  if (
+    !form.name.value.match(/^[a-zàâéèëêïîôùüçœ\"-]{1,60}$/i) ||
+    form.name.value.length < 2 ||
+    form.name.value === null
+  ) {
+    document
+      .querySelector("#firstError.formData")
+      .setAttribute("data-error-visible", "true");
+    document
+      .querySelector("#firstError.formData")
+      .setAttribute("data-error", "Saisir deux caractères minimum *");
   } else {
-    console.log("ok");
+    document
+      .querySelector("#firstError.formData")
+      .setAttribute("data-error-visible", "false");
+    firstElt = true;
   }
 };
 

@@ -1063,6 +1063,57 @@ header .t .number span .fa-phone {
           appearance: none;
 }
 
+.contact .map .errorText {
+  font-family: "Nunito", sans-serif;
+  color: red;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.contact .map .validText {
+  font-family: "Nunito", sans-serif;
+  color: red;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.contact .map .text-control {
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
+}
+
+.contact .map .formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.6em;
+  color: #e54858;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  text-align: right;
+  line-height: 0.3;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact .map .formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+
+.contact .map .formData[data-error-visible="true"] .text-control {
+  border: 2px solid #e54858;
+}
+
+.contact .map input[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.5em;
+  color: red;
+}
+
 .contact .map input[type="submit"] {
   outline: none;
   -webkit-appearance: none;
