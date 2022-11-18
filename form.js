@@ -13,84 +13,110 @@ form.email.addEventListener("change", function () {
   validEmail(this);
 });
 
-let nameElt = false;
-let firstElt = false;
-let mobileElt = false;
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (validName(form.name)) {
+    console.log("ok");
+  } else {
+    console.log("pas ok");
+  }
+});
 
 const validName = function (inputName) {
-  if (
-    !form.name.value.match(/^[a-zàâéèëêïîôùüçœ\"-]{1,60}$/i) ||
-    form.name.value.length < 2 ||
-    form.name.value === null
-  ) {
-    document
-      .querySelector("#nameError.formData")
-      .setAttribute("data-error-visible", "true");
-    document
-      .querySelector("#nameError.formData")
-      .setAttribute("data-error", "Saisir deux caractères minimum *");
+  valid = false;
+  let error;
+  if (inputName.value.length < 2) {
+    error = "2 caractères minimum";
+  } else if (!inputName.value.match(/^[a-zàâéèëêïîôùüçœ\"-]{1,60}$/i)) {
+    error = "Merci d'indiquer un nom valide";
   } else {
-    document
-      .querySelector("#nameError.formData")
-      .setAttribute("data-error-visible", "false");
-    remove.document
-      .querySelector("#nameError.formData")
-      .setAttribute("data-error", "Saisir deux caractères minimum *");
-    nameElt = true;
+    error = "Saisie valide";
+    valid = true;
+  }
+  let span = inputName.nextElementSibling;
+  if (valid) {
+    span.innerHTML = error;
+    span.classList.remove("spanError");
+    span.classList.add("spanOk");
+    return true;
+  } else {
+    span.innerHTML = error;
+    span.classList.remove("spanOk");
+    span.classList.add("spanError");
+    return false;
   }
 };
+
 const validFirst = function (inputFirst) {
-  if (
-    !form.first.value.match(/^[a-zàâéèëêïîôùüçœ\"-]{1,60}$/i) ||
-    form.first.value.length < 2 ||
-    form.first.value === null
-  ) {
-    document
-      .querySelector("#firstError.formData")
-      .setAttribute("data-error-visible", "true");
-    document
-      .querySelector("#firstError.formData")
-      .setAttribute("data-error", "Saisir deux caractères minimum *");
+  valid = false;
+  let error;
+  if (inputFirst.value.length < 2) {
+    error = "2 caractères minimum";
+  } else if (!inputFirst.value.match(/^[a-zàâéèëêïîôùüçœ\"-]{1,60}$/i)) {
+    error = "Merci d'indiquer un prénom valide";
   } else {
-    document
-      .querySelector("#firstError.formData")
-      .setAttribute("data-error-visible", "false");
-    firstElt = true;
+    error = "Saisie valide";
+    valid = true;
+  }
+  let span = inputFirst.nextElementSibling;
+  if (valid) {
+    span.innerHTML = error;
+    span.classList.remove("spanError");
+    span.classList.add("spanOk");
+  } else {
+    span.innerHTML = error;
+    span.classList.remove("spanOk");
+    span.classList.add("spanError");
   }
 };
+!form.mobile.value.match(/^((\+)33|0)[1-9](\d{2}){4}$/g);
+
 const validMobile = function (inputMobile) {
-  if (
-    !form.mobile.value.match(/^((\+)33|0)[1-9](\d{2}){4}$/g) ||
-    form.mobile.value === null
-  ) {
-    document
-      .querySelector("#mobileError.formData")
-      .setAttribute("data-error-visible", "true");
-    document
-      .querySelector("#mobileError.formData")
-      .setAttribute("data-error", "Numéro invalide");
+  valid = false;
+  let error;
+  if (inputMobile.value.length < 10) {
+    error = "Merci d'indiquer un numéro valide";
+  } else if (!inputMobile.value.match(/^((\+)33|0)[1-9](\d{2}){4}$/g)) {
+    error = "Merci d'indiquer un numéro valide";
   } else {
-    document
-      .querySelector("#mobileError.formData")
-      .setAttribute("data-error-visible", "false");
-    mobileElt = true;
+    error = "Saisie valide";
+    valid = true;
+  }
+  let span = inputMobile.nextElementSibling;
+  if (valid) {
+    span.innerHTML = error;
+    span.classList.remove("spanError");
+    span.classList.add("spanOk");
+    // return true;
+  } else {
+    span.innerHTML = error;
+    span.classList.remove("spanOk");
+    span.classList.add("spanError");
+    // return false;
   }
 };
 const validEmail = function (inputEmail) {
-  if (
-    !form.email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) ||
-    form.email.value === null
-  ) {
-    document
-      .querySelector("#mailError.formData")
-      .setAttribute("data-error-visible", "true");
-    document
-      .querySelector("#mailError.formData")
-      .setAttribute("data-error", "Adresse mail invalide");
+  valid = false;
+  let error;
+  if (inputEmail.value === null) {
+    error = "Merci d'indiquer un numéro valide";
+  } else if (!inputEmail.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+    error = "Merci d'indiquer un email valide";
   } else {
-    document
-      .querySelector("#mailError.formData")
-      .setAttribute("data-error-visible", "false");
+    error = "Saisie valide";
+    valid = true;
+  }
+  let span = inputEmail.nextElementSibling;
+  if (valid) {
+    span.innerHTML = error;
+    span.classList.remove("spanError");
+    span.classList.add("spanOk");
+    //return true;
+  } else {
+    span.innerHTML = error;
+    span.classList.remove("spanOk");
+    span.classList.add("spanError");
+    // return false;
   }
 };
 

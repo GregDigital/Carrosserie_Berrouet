@@ -49,9 +49,9 @@ masks.forEach((mask) => {
     opacity: 1,
   });
 });
-
+/*
 // form
-var input = document.querySelector("#picture");
+var picture = document.querySelector("#picture");
 var preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
@@ -109,3 +109,4 @@ function returnFileSize(number) {
     return (number / 1048576).toFixed(1) + " Mo";
   }
 }
+*/

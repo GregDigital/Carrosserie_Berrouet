@@ -165,28 +165,25 @@ padding-bottom: 1em;
       font-size: 20px;
       height: 48px;
     }
-    .formData[data-error]::after {
-      content: attr(data-error);
+    .spanError {
+
       font-family: $font1;
-      font-size: 0.6em;
+      font-size: 0.8em;
       color: #e54858;
       display: inline-block;
-      line-height: 0.3;
-      opacity: 0;
       transition: 0.3s;
     }
-    .formData[data-error-visible="true"]::after {
-      opacity: 1;
+    .spanOk {
+      display: none;
+      font-family: $font1;
+      font-size: 0.8em;
+      color: #2e7b31;
+      //display: inline-block;
+      transition: 0.3s;
     }
-    .formData[data-error-visible="true"] .text-control {
-      border: 2px solid #e54858;
-    }
+   
     
-    input[data-error]::after {
-        content: attr(data-error);
-        font-size: 0.5em;
-        color: red;
-    } 
+   
     input[type="submit"] {
       outline: none;
       appearance: none;

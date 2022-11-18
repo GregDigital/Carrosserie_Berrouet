@@ -1086,30 +1086,22 @@ header .t .number span .fa-phone {
   height: 48px;
 }
 
-.contact .map .formData[data-error]::after {
-  content: attr(data-error);
+.contact .map .spanError {
   font-family: "Nunito", sans-serif;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #e54858;
   display: inline-block;
-  line-height: 0.3;
-  opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.contact .map .formData[data-error-visible="true"]::after {
-  opacity: 1;
-}
-
-.contact .map .formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
-}
-
-.contact .map input[data-error]::after {
-  content: attr(data-error);
-  font-size: 0.5em;
-  color: red;
+.contact .map .spanOk {
+  display: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8em;
+  color: #2e7b31;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .contact .map input[type="submit"] {
