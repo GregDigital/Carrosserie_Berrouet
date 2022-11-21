@@ -12,11 +12,21 @@ form.mobile.addEventListener("change", function () {
 form.email.addEventListener("change", function () {
   validEmail(this);
 });
+form.message.addEventListener("change", function () {
+  validMessage(this);
+});
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  if (validName(form.name)) {
+  if (
+    validName(form.name) &&
+    validFirst(form.first) &&
+    validMobile(form.mobile) &&
+    validEmail(form.email) &&
+    validMessage(form.message)
+  ) {
     console.log("ok");
+    return;
   } else {
     console.log("pas ok");
   }
@@ -63,10 +73,12 @@ const validFirst = function (inputFirst) {
     span.innerHTML = error;
     span.classList.remove("spanError");
     span.classList.add("spanOk");
+    return true;
   } else {
     span.innerHTML = error;
     span.classList.remove("spanOk");
     span.classList.add("spanError");
+    return false;
   }
 };
 !form.mobile.value.match(/^((\+)33|0)[1-9](\d{2}){4}$/g);
@@ -87,12 +99,12 @@ const validMobile = function (inputMobile) {
     span.innerHTML = error;
     span.classList.remove("spanError");
     span.classList.add("spanOk");
-    // return true;
+    return true;
   } else {
     span.innerHTML = error;
     span.classList.remove("spanOk");
     span.classList.add("spanError");
-    // return false;
+    return false;
   }
 };
 const validEmail = function (inputEmail) {
@@ -111,12 +123,36 @@ const validEmail = function (inputEmail) {
     span.innerHTML = error;
     span.classList.remove("spanError");
     span.classList.add("spanOk");
-    //return true;
+    return true;
   } else {
     span.innerHTML = error;
     span.classList.remove("spanOk");
     span.classList.add("spanError");
-    // return false;
+    return false;
+  }
+};
+const validMessage = function (inputMessage) {
+  valid = false;
+  let error;
+  if (inputMessage.value === null) {
+    error = "Indiquer votre message";
+  } else if (inputMessage.value.length < 5) {
+    error = "Formuler votre message 5 caractères min";
+  } else {
+    error = "Saisie valide";
+    valid = true;
+  }
+  let span = inputMessage.nextElementSibling;
+  if (valid) {
+    span.innerHTML = error;
+    span.classList.remove("spanError");
+    span.classList.add("spanOk");
+    return true;
+  } else {
+    span.innerHTML = error;
+    span.classList.remove("spanOk");
+    span.classList.add("spanError");
+    return false;
   }
 };
 
