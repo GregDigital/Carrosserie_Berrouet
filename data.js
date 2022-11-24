@@ -73,6 +73,6 @@ function afficher(user) {
           `;
 }
 
-fetch("afterbefore.json")
+fetch("./json/afterbefore.json")
   .then((response) => response.json())
   .then((json) => show(json));

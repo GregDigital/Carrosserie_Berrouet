@@ -25,8 +25,34 @@ form.addEventListener("submit", function (e) {
     validEmail(form.email) &&
     validMessage(form.message)
   ) {
+    statusTxt = form.querySelector(".button-area span");
+    statusTxt.style.color = "#ad6c6c";
+    statusTxt.style.display = "block";
+    statusTxt.innerText = "Envoi de votre message...";
+    let xhr = new XMLHttpRequest();
+    xhr.open("form.php", true);
+    xhr.onload = () => {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        let response = xhr.response;
+        if (
+          response.indexOf("required") != -1 ||
+          response.indexOf("valid") != -1 ||
+          response.indexOf("failed") != -1
+        ) {
+          statusTxt.style.color = "rgb(190, 57, 57)";
+        } else {
+          form.reset();
+          setTimeout(() => {
+            statusTxt.style.display = "none";
+          }, 2000);
+        }
+        statusTxt.innerText = response;
+        form.classList.remove("disabled");
+      }
+    };
+    let formData = new FormData(form);
+    xhr.send(formData);
     console.log("ok");
-    return;
   } else {
     console.log("pas ok");
   }
