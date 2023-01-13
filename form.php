@@ -5,7 +5,7 @@
   $mobile = valid_donnees($_POST['mobile']);
   $email = valid_donnees($_POST['email']);
   $message = valid_donnees($_POST['message']);
-  $picture = valid_donnees($_FILES['picture']);
+
 
   function valid_donnees($donnees){
     $donnees = trim($donnees);
@@ -16,7 +16,7 @@
 
   if(!empty($email) && !empty($message)){
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $receiver = "hello@sandrapizel.fr";
+      $receiver = "gdossantos64@gmail.com";
       $subject = "From: $name <$email>";
       $body = "Name: $name\nFirstname: $prenom\nEmail: $email\nMessage:\n$message\n";
       $sender = "From: $email";
