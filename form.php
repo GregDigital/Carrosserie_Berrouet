@@ -18,7 +18,7 @@
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
       $receiver = "gdossantos64@gmail.com";
       $subject = "From: $name <$email>";
-      $body = "Name: $name\nFirstname: $prenom\nEmail: $email\nMessage:\n$message\n";
+      $body = "Nom: $name\nPrénom: $first\nMobile: $mobile\nEmail: $email\nMessage:\n$message\n";
       $sender = "From: $email";
       if(mail($receiver, $subject, $body, $sender)){
          echo "Merci, Votre message a bien été envoyé";
