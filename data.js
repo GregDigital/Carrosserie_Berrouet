@@ -30,8 +30,8 @@ function displayClose() {
   lightbox.addEventListener("click", (e) => {
     if (event.target !== container && !container.contains(event.target)) {
       // fermer la modale
-      lightbox.style.display = "none";
       scroll.classList.remove("true");
+      lightbox.style.display = "none";
     }
   });
 }
