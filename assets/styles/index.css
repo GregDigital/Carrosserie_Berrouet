@@ -331,7 +331,7 @@ header .t .number span .fa-phone {
 
 .home #svg {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 35%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
