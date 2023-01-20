@@ -1130,20 +1130,25 @@ header .t .number span .fa-phone {
     opacity: 0.8;
     position: absolute;
     z-index: 1;
-    top: -30px;
-    right: 6%;
-    width: 320px;
-    height: 450px;
+    top: 71%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-color: #050505;
     border: solid 0.3px red;
   }
   .contact .map form {
     position: absolute;
     z-index: 1;
-    top: 0px;
-    right: 5%;
+    top: 82%;
+    left: 50%;
     width: 300px;
     height: 400px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
   }
 }
 
