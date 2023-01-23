@@ -1132,7 +1132,7 @@ header .t .number span .fa-phone {
     z-index: 1;
     top: 71%;
     left: 50%;
-    width: 300px;
+    width: 90%;
     height: 400px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1144,7 +1144,7 @@ header .t .number span .fa-phone {
     z-index: 1;
     top: 82%;
     left: 50%;
-    width: 300px;
+    width: 90%;
     height: 400px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
